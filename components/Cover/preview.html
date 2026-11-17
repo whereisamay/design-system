@@ -1,0 +1,37 @@
+<!-- @dsCard height=288 -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: var(--cream); }
+  .cover { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--cream); }
+  .cover svg { position: absolute; inset: 0; }
+  .ink { fill: var(--ink); } .mustard { fill: var(--mustard); } .mustard2 { fill: var(--mustard-2); }
+  .coral { fill: var(--coral); } .sage { fill: var(--sage); } .cream2 { fill: var(--cream-2); }
+  .edge { stroke: var(--ink); stroke-width: var(--border-ui); }
+  .tile { rx: var(--radius-md); } .slab { rx: var(--radius-lg); }
+  .text { position: absolute; left: 40px; bottom: 36px; max-width: 440px; }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 72px; line-height: 0.95; color: var(--ink); margin: 0; }
+  .name .dot { color: var(--coral); }
+  .tag { font-family: var(--font-body); font-size: 14px; color: var(--ink-soft); margin: 16px 0 0; }
+</style></head>
+<body>
+<div class="cover">
+  <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
+    <!-- blocks: ink slab 220×320 (radius-lg) bleeding top-right, mustard disc r=118, coral pill 196×56, sage tile 112×112 (radius-md), cream-2 tile inside the slab
+         arrangement: one tall ink slab with satellites, staggered right of x=480
+         pattern: pills and discs from radius-pill and the blob portrait, because the README calls the system soft, outlined, "pills for buttons and chips"
+         scales: border-ui 2px outlines, radius-md 20, radius-lg 32, radius-pill as half the short side (28 / 20), gaps of space-24 -->
+    <rect class="ink slab" x="770" y="-40" width="220" height="320"/>
+    <rect class="sage tile edge" x="512" y="28" width="112" height="112"/>
+    <circle class="mustard edge" cx="668" cy="168" r="118"/>
+    <rect class="coral edge" x="540" y="214" width="196" height="56" rx="28"/>
+    <rect class="mustard2" x="806" y="56" width="128" height="40" rx="20"/>
+    <rect class="mustard2" x="806" y="120" width="88" height="40" rx="20"/>
+    <rect class="cream2" x="806" y="184" width="108" height="40" rx="20"/>
+  </svg>
+  <div class="text">
+    <h1 class="name">Amay Design<br>System</h1>
+    <p class="tag">Cream paper, ink outlines and one coral spark.</p>
+  </div>
+</div>
+</body></html>

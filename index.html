@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amay Design System</title>
+<link rel="stylesheet" href="tokens/tokens.css">
+<link rel="stylesheet" href="components/bundle.css">
+<style>
+*{box-sizing:border-box} body{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.g-hero{padding:72px 0 40px;background:var(--cream-2);border-bottom:1px solid var(--line-soft)}
+.g-hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(40px,6vw,72px);line-height:1.02;margin:0 0 16px}
+.g-hero p{font-size:18px;color:var(--ink-soft);max-width:640px;margin:0 0 24px}
+.swatches{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.sw{width:120px;border:2px solid var(--ink);border-radius:var(--radius-md);overflow:hidden;font-size:12px;background:var(--cream)}
+.sw i{display:block;height:64px;border-bottom:2px solid var(--ink)}
+.sw span{display:block;padding:8px 10px;font-weight:700}
+.g-item{display:grid;grid-template-columns:280px minmax(0,1fr);gap:32px;padding:40px 0;border-bottom:1px solid var(--line)}
+.g-meta h2{font-family:var(--font-display);font-weight:600;font-size:28px;margin:10px 0 8px}
+.g-meta p{font-size:14.5px;color:var(--ink-soft);margin:0 0 12px}
+.g-stage{border:2px dashed var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--cream)}
+@media (max-width:860px){.g-item{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="ds-grain" aria-hidden="true"></div>
+<section class="g-hero"><div class="wrap">
+<p class="eyebrow">design system</p>
+<h1>Amay Design System</h1>
+<p>Cream paper, ink outlines and one coral spark. The tokens and components behind Amay's writer portfolio, product portfolio and case studies.</p>
+<div class="swatches">
+<div class="sw"><i style="background:var(--cream)"></i><span>cream</span></div>
+<div class="sw"><i style="background:var(--cream-2)"></i><span>cream-2</span></div>
+<div class="sw"><i style="background:var(--ink)"></i><span>ink</span></div>
+<div class="sw"><i style="background:var(--mustard)"></i><span>mustard</span></div>
+<div class="sw"><i style="background:var(--mustard-2)"></i><span>mustard-2</span></div>
+<div class="sw"><i style="background:var(--coral)"></i><span>coral</span></div>
+<div class="sw"><i style="background:var(--sage)"></i><span>sage</span></div>
+</div>
+</div></section>
+<main class="wrap">
+<section class="g-item" id="Button"><div class="g-meta"><span class="chip">Actions</span><h2>Button</h2><p>The pill button: the main call to action on every page.</p><a class="ds-link" href="components/Button/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding:24px">
+  <a class="btn btn-primary" href="#">Read my work</a>
+  <a class="btn btn-ghost" href="#">Get in touch</a>
+  <a class="btn btn-primary btn-sm" href="#">Read it</a>
+  <a class="btn btn-ghost btn-sm" href="#">Writer portfolio ↗</a>
+</div>
+</div></section><section class="g-item" id="IconButton"><div class="g-meta"><span class="chip">Actions</span><h2>IconButton</h2><p>A 38px round outlined button for social links in the header.</p><a class="ds-link" href="components/IconButton/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="display:flex;gap:12px;padding:24px">
+  <a class="icon-btn" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+</div>
+</div></section><section class="g-item" id="TextLink"><div class="g-meta"><span class="chip">Actions</span><h2>TextLink</h2><p>A bold inline link with a 2px `coral` underline, used for "Read it →".</p><a class="ds-link" href="components/TextLink/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;display:flex;gap:28px"><a class="ds-link" href="#">Read it →</a><a class="work-card-link" href="#">Read the case study →</a></div>
+</div></section><section class="g-item" id="Chip"><div class="g-meta"><span class="chip">Labels</span><h2>Chip</h2><p>A small uppercase pill that names a category: Essay, Travel, Fintech.</p><a class="ds-link" href="components/Chip/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;display:flex;gap:10px;flex-wrap:wrap">
+  <span class="chip">Essay</span><span class="chip">Travel</span><span class="chip">Built with code</span><span class="chip chip-outline">Healthcare</span>
+</div>
+</div></section><section class="g-item" id="SectionHeading"><div class="g-meta"><span class="chip">Labels</span><h2>SectionHeading</h2><p>The three-part opener every section uses: eyebrow, title, subtitle.</p><a class="ds-link" href="components/SectionHeading/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:28px">
+  <p class="eyebrow">a few things I&rsquo;ve written</p>
+  <h2 class="section-title">Selected work</h2>
+  <p class="section-sub">From travel experiences to merchant guides, knowingly or unknowingly, readers have followed my words ;)</p>
+</div>
+</div></section><section class="g-item" id="TextAccents"><div class="g-meta"><span class="chip">Labels</span><h2>TextAccents</h2><p>Two ways to make one word in a big serif headline sing.</p><a class="ds-link" href="components/TextAccents/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:28px">
+  <h1 class="display-hero" style="margin:0">Hello, I am <span class="script">Amay</span>!<br>and <span class="highlight">writer</span> at heart</h1>
+</div>
+</div></section><section class="g-item" id="SiteHeader"><div class="g-meta"><span class="chip">Navigation</span><h2>SiteHeader</h2><p>The sticky top bar: wordmark left, section links centre, social icons right.</p><a class="ds-link" href="components/SiteHeader/README.md">Guidelines →</a></div><div class="g-stage">
+<header class="site-header" style="position:relative">
+  <div class="header-inner">
+    <a href="#" class="logo">Amay<span class="logo-dot">.</span></a>
+    <nav class="main-nav"><a href="#">Story</a><a href="#">Work</a><a href="#">WAQs</a></nav>
+    <a class="icon-btn" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+  </div>
+</header>
+</div></section><section class="g-item" id="SiteFooter"><div class="g-meta"><span class="chip">Navigation</span><h2>SiteFooter</h2><p>The dark sign-off at the bottom of every page.</p><a class="ds-link" href="components/SiteFooter/README.md">Guidelines →</a></div><div class="g-stage">
+<footer class="site-footer">
+  <h2 class="footer-title">Let&rsquo;s write<br>something together.</h2>
+  <div class="footer-grid">
+    <span class="footer-email">amayvp96@gmail.com</span>
+    <div class="footer-socials"><a href="#">LinkedIn ↗</a><a href="#">Instagram ↗</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Amay Prabhu</span><a href="#">Back to top ↑</a></div>
+</footer>
+</div></section><section class="g-item" id="PageHero"><div class="g-meta"><span class="chip">Navigation</span><h2>PageHero</h2><p>The opener for an article or case-study page.</p><a class="ds-link" href="components/PageHero/README.md">Guidelines →</a></div><div class="g-stage">
+<section class="page-hero">
+  <a class="back-link" href="#">← Back to the portfolio</a>
+  <p class="eyebrow">AI work · Built with code</p>
+  <h1 class="page-title">FX Netting Dashboard</h1>
+  <p class="page-sub">A stopgap I built with Claude Code and shipped in days.</p>
+  <p class="page-meta">5 min read <span style="opacity:.5;margin:0 8px">·</span> Case study</p>
+</section>
+</div></section><section class="g-item" id="WorkCard"><div class="g-meta"><span class="chip">Content</span><h2>WorkCard</h2><p>The card for one piece of work: an essay, a case study, a project.</p><a class="ds-link" href="components/WorkCard/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:720px">
+  <article class="work-card">
+    <div class="work-card-media"><span>+</span></div>
+    <div class="work-card-body"><span class="chip">Essay</span><h3>What&rsquo;s in that tote bag?</h3><p>The backstory behind this transition &amp; what followed&hellip;</p><a class="work-card-link" href="#">Read it &rarr;</a></div>
+  </article>
+  <article class="work-card">
+    <div class="work-card-media" style="background:var(--sage)"><span>02</span></div>
+    <div class="work-card-body"><span class="chip">Built with code</span><h3>FX Netting Dashboard</h3><p>A stopgap tool that netted opposing currency trades.</p><a class="work-card-link" href="#">Read the case study &rarr;</a></div>
+  </article>
+</div>
+</div></section><section class="g-item" id="Accordion"><div class="g-meta"><span class="chip">Content</span><h2>Accordion</h2><p>Expandable question-and-answer rows: the "WAQs" on the writer site.</p><a class="ds-link" href="components/Accordion/README.md">Guidelines →</a></div><div class="g-stage">
+<div class="faq-list" style="padding:24px">
+  <div class="faq-item is-open"><h3 class="faq-question-wrap"><button class="faq-question" aria-expanded="true" aria-controls="a1" id="q1"><span class="faq-q-text">Why do you want to write?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+    <div class="faq-answer" id="a1" role="region" aria-labelledby="q1"><div class="faq-answer-inner"><p>Ummmmmmm Ummmmmm..... <em>(as long as I can hold my breath for)</em>.</p></div></div></div>
+  <div class="faq-item"><h3 class="faq-question-wrap"><button class="faq-question" aria-expanded="false" aria-controls="a2" id="q2"><span class="faq-q-text">Paperbacks or E-Books?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+    <div class="faq-answer" id="a2" role="region" aria-labelledby="q2"><div class="faq-answer-inner"><p>Depends on the size of my house.</p></div></div></div>
+</div>
+
+</div></section><section class="g-item" id="JourneyTimeline"><div class="g-meta"><span class="chip">Content</span><h2>JourneyTimeline</h2><p>A horizontal career line where each stop is an accordion card. It's built from Accordion and appears on the product portfolio.</p><a class="ds-link" href="components/JourneyTimeline/README.md">Guidelines →</a></div><div class="g-stage">
+<div class="journey" style="margin:24px;--stops:3">
+  <div class="faq-item is-open"><button class="faq-question" aria-expanded="true"><span class="journey-years">2025 – 2026</span><span class="journey-name">Finmo</span><span class="journey-role">Product Manager</span></button>
+    <div class="faq-answer"><div class="faq-answer-inner"><p>In money products, trust is the feature.</p></div></div></div>
+  <div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="journey-years">2021 – 2025</span><span class="journey-name">Code &amp; Theory</span><span class="journey-role">Product Owner</span></button>
+    <div class="faq-answer"><div class="faq-answer-inner"><p>Creative work scales on clear briefs.</p></div></div></div>
+  <div class="faq-item"><button class="faq-question" aria-expanded="false"><span class="journey-years">2020 – 2021</span><span class="journey-name">StepSetGo</span><span class="journey-role">Associate PM, Growth</span></button>
+    <div class="faq-answer"><div class="faq-answer-inner"><p>Users decide in their first week.</p></div></div></div>
+</div>
+
+</div></section><section class="g-item" id="PullQuote"><div class="g-meta"><span class="chip">Content</span><h2>PullQuote</h2><p>One sentence lifted out of long-form text to stop the eye.</p><a class="ds-link" href="components/PullQuote/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:4px 28px 28px;max-width:720px"><blockquote class="pull-quote" style="margin-top:24px">It never writes to the production database. That's what made it safe to ship fast.</blockquote></div>
+</div></section><section class="g-item" id="StepList"><div class="g-meta"><span class="chip">Content</span><h2>StepList</h2><p>A numbered sequence with big italic `coral` numerals.</p><a class="ds-link" href="components/StepList/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;max-width:520px"><ol class="step-list">
+  <li><b>Download the extract</b><br>FinOps pulls the day's transactions.</li>
+  <li><b>Upload it to the tool</b><br>The import checks the columns first.</li>
+  <li><b>FinOps picks what to net</b><br>They export a JSON of the decision.</li>
+</ol></div>
+</div></section><section class="g-item" id="MetricTile"><div class="g-meta"><span class="chip">Content</span><h2>MetricTile</h2><p>A bordered box with one headline number and a short label: the impact row on a case study.</p><a class="ds-link" href="components/MetricTile/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:760px">
+  <div class="metric"><b>$400–500</b><span>saved per day</span></div>
+  <div class="metric"><b>40–45</b><span>weekly support queries removed</span></div>
+  <div class="metric"><b>500–600</b><span>transactions a day</span></div>
+</div>
+</div></section><section class="g-item" id="ChatBubble"><div class="g-meta"><span class="chip">Content</span><h2>ChatBubble</h2><p>Speech bubbles for showing a conversation with an AI agent.</p><a class="ds-link" href="components/ChatBubble/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;max-width:520px"><div class="chat">
+  <div class="bubble q">Why is my commission lower this cycle?</div>
+  <div class="bubble a">10 transactions hit the <b style="color:var(--ink)">fee cap</b>, so your share was worked out on the capped fee.</div>
+</div></div>
+</div></section><section class="g-item" id="DataTable"><div class="g-meta"><span class="chip">Content</span><h2>DataTable</h2><p>A rounded, ink-bordered table for short reference lists inside articles.</p><a class="ds-link" href="components/DataTable/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px;max-width:620px"><div class="table-scroll"><table class="menu-table">
+  <thead><tr><th>Dish</th><th>Where to get it</th></tr></thead>
+  <tbody><tr><td>Fish thali</td><td>Ritz Classic, Panjim</td></tr><tr><td>Bebinca</td><td>Any local bakery</td></tr><tr><td>Nilgiri tea</td><td>Highfield Tea Factory</td></tr></tbody>
+</table></div></div>
+</div></section><section class="g-item" id="BlobPortrait"><div class="g-meta"><span class="chip">Media</span><h2>BlobPortrait</h2><p>The hero headshot inside an organic blob: the most recognisable shape in the system.</p><a class="ds-link" href="components/BlobPortrait/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:40px 60px"><div class="blob-portrait" style="width:260px">
+  <div class="photo-blob" aria-hidden="true"></div>
+  <div class="photo-frame"><img src="assets/headshot.png" alt="Amay Prabhu"></div>
+  <span class="sticker-dots" aria-hidden="true"></span>
+</div></div>
+</div></section><section class="g-item" id="PhotoCarousel"><div class="g-meta"><span class="chip">Media</span><h2>PhotoCarousel</h2><p>A swipeable square photo strip with numbered captions, used in travel stories.</p><a class="ds-link" href="components/PhotoCarousel/README.md">Guidelines →</a></div><div class="g-stage">
+<div style="padding:24px"><div class="photo-carousel">
+  <div class="photo-carousel-track">
+    <figure class="photo-carousel-slide"><div class="photo-carousel-media"><img src="assets/headshot.png" alt=""></div><figcaption class="photo-carousel-caption"><span class="photo-carousel-num">01</span>A slow morning in Goa</figcaption></figure>
+    <figure class="photo-carousel-slide"><div class="photo-carousel-media"></div><figcaption class="photo-carousel-caption"><span class="photo-carousel-num">02</span>Tea estates in the Nilgiris</figcaption></figure>
+  </div>
+  <div class="photo-carousel-controls"><button class="carousel-btn" data-dir="prev" aria-label="Previous">←</button><div class="photo-carousel-dots"></div><button class="carousel-btn" data-dir="next" aria-label="Next">→</button></div>
+</div></div>
+
+</div></section>
+</main>
+<script src="components/bundle.js"></script>
+<script>AmayDS.initAccordions();AmayDS.initCarousels();</script>
+</body></html>
